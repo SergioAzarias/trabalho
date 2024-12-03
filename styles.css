@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 60%; /* Diminuir a largura para 60% da tela */
+  max-width: 600px; /* Largura máxima de 600px para ficar mais compacta */
+  background: #ffffff;
+  padding: 10px; /* Menos padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #4c4c4c;
+}
+
+.form-container, .historico-container {
+  flex: 1;
+  margin: 0 5px; /* Menos espaço entre o formulário e o histórico */
+}
+
+h1 {
+  font-size: 18px; /* Diminuir tamanho do título */
+  margin-bottom: 12px; /* Menos espaço abaixo */
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin: 6px 0 3px; /* Menos espaçamento */
+  text-align: left;
+  color: #4c4c4c;
+}
+
+input, select {
+  width: 100%;
+  padding: 7px; /* Menos padding */
+  margin-bottom: 6px; /* Menos espaço entre campos */
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #eaf1ff;
+}
+
+input:focus, select:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Menos padding no botão */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#resultado {
+  margin-top: 8px; /* Menos espaço entre resultado e botão */
+  font-size: 14px; /* Fonte menor */
+  font-weight: bold;
+  padding: 6px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.aprovado {
+  color: #28a745;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.reprovado {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px; /* Menos espaço entre os botões */
+}
+
+#historico {
+  margin-top: 15px; /* Menos espaço em relação ao resultado */
+  border-left: 3px solid #007bff;
+  padding-left: 15px; /* Menos padding no histórico */
+}
+
+#historico h2 {
+  font-size: 14px; /* Tamanho de fonte reduzido para o título do histórico */
+  color: #6f42c1;
+  margin-bottom: 8px; /* Menos espaço abaixo do título */
+}
+
+#listaHistorico {
+  list-style-type: none;
+  padding: 0;
+}
+
+#listaHistorico li {
+  background: #f8f9fa;
+  margin: 4px 0; /* Menos espaço entre os itens */
+  padding: 8px; /* Menos padding nos itens do histórico */
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#btnLimparHistorico {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Menos padding no botão de limpar */
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#btnLimparHistorico:hover {
+  background-color: #c82333;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    padding: 10px;
+  }
+
+  .form-container, .historico-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #historico {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
